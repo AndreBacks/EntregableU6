@@ -1,0 +1,615 @@
+body {
+  
+    background-image: url(fondo.jpg);
+    background-repeat:initial;
+    background-size:cover;
+    margin: 0
+    
+   
+  }
+
+
+  
+/*---------------------------------HEADER------------------------------------------------------------------------------*/
+.caja{
+  width: 700px;
+  position: relative;
+  top: 25%;
+  margin: 0 auto; /* BORDES  */
+  align-items: center;
+}
+
+
+.caja h3{
+position: absolute;
+top: 106%;
+left: 8%;
+right: 20px;
+border: 0px;
+color: #3498DB ;
+letter-spacing: 2px;
+text-shadow:1px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+font-family: 'Montserrat', sans-serif;
+font-size: 2em;
+}
+
+
+
+/*---------------------------------FORMULARIO DOCTORES------------------------------------------------------------------------------*/
+  #formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 60px;
+    position: relative;
+    top: 66px;
+    left: 44%;
+    width: 44%;
+    height: 8%;
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.3);
+    border: 3px dotted #1f39ce;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+
+  .title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 20px;
+  
+}
+
+.message{
+  font-weight: bold;
+}
+
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 80%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+#esp{
+  font-weight: bold;
+}
+
+
+
+
+/*---------------------------------boton 1 DOCTORES------------------------------------------------------------------------------*/
+
+.submit {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 60px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #03030380;
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  border: 1px solid #1645c580;
+  background-color:#3d8dc7;
+  transition: 0.5s ease;
+  
+  
+}
+
+.submit:hover,:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff,
+              0 0 10px #ffffff,
+              0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff,
+              0 0 20px #008cff,
+              0 0 50px #008cff,
+              0 0 100px #008cff;
+}
+
+/*---------------------------------boton 2 DOCTORES------------------------------------------------------------------------------*/
+
+.buttonD {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: green;
+  border: 1px solid rgb (60,179,113);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.buttonD::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #228b22;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.buttonD:hover::before {
+  scale: 3;
+}
+
+.buttonD:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.buttonD:active {
+  scale: 1;
+}
+
+
+/*--------------------------------CAJA RESPUESTA------------------------------------------------------------------------------*/
+
+.respuestaC{
+  width: 75%;
+  margin: auto;
+  height: fit-content;
+  position: relative;
+  top:-43px;
+  left: 15%;
+  margin: 10px ; /* BORDES  */
+  padding: 10px;
+  border-radius: 60px;
+  background:#6495ED;
+  align-items: center;
+  box-shadow: transparent;
+  border: 3px dotted #1f39ce;
+}
+
+
+.respuestaC h3{
+position: relative;
+top: 106%;
+left: 1px;
+border: 0px;
+color: black ;
+letter-spacing: 2px;
+text-shadow:1px 2px 0px white;
+font-family: 'Montserrat', sans-serif;
+font-size: 2em;
+}
+
+
+
+/*---------------------------------FORMULARIO PACIENTES------------------------------------------------------------------------------*/
+#formularioP{
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  max-width: 450px;
+  background: white;
+  padding: 29px;
+  margin:11px;
+  border-radius: 60px;
+  position: relative;
+  top: -664px;
+  left: 98%;
+  width: 100%;
+  height: 87%;
+  box-shadow: 0 8px 7px rgba(0, 0, 0, 0.3);
+  border: 3px dotted #1f39ce;
+  text-align: center;
+  justify-content: center;
+}
+
+.title2 {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.title2::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title2::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title2::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message2{
+  font-weight: bold;
+}
+
+
+.message2, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 20px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.formP label {
+  position: relative;
+}
+
+
+
+.formP label .input2 {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.formP label .input2 + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.formP label .input2:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.formP label .input2:focus + span,.formP label .input2:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.formP label .input2:valid + span {
+  color: green;
+}
+
+#esp2{
+  font-weight: bold;
+}
+
+/******************BOTONPACIENTE1***************************************************************************************/
+
+.submit2 {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  
+  color: #03030380;
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  border: 1px solid #1645c580;
+  background-color:#3d8dc7;
+  transition: 0.5s ease;
+ 
+  
+}
+
+.submit2:hover,:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff,
+              0 0 10px #ffffff,
+              0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff,
+              0 0 20px #008cff,
+              0 0 50px #008cff,
+              0 0 100px #008cff;
+}
+
+/******************BOTONPACIENTE2***************************************************************************************/
+
+/*---------------------------------boton 2 DOCTORES------------------------------------------------------------------------------*/
+
+.buttonP {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: green;
+  border: 1px solid rgb (60,179,113);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.buttonP::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #228b22;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.buttonP:hover::before {
+  scale: 3;
+}
+
+.buttonP:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.buttonP:active {
+  scale: 1;
+}
+
+
+
+
+
+/*********************************************************************************************************/
+/*TABLA DOCTORES*/
+ h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow:1px 2px 0px #167dd7, -1px -1px 0px #0b2edd, 1px -1px 0px #000, -1px 1px 0px #000;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+#doctorTable {
+  border-collapse: collapse; /* Combina los bordes de las celdas */
+  width: 100%;  align-items: center;
+  left: 10%;
+  right: 20px;
+  
+}
+
+/* Estilos para el encabezado de la tabla */
+#doctorTable thead {
+  background-color: #86b1d0;
+}
+
+#doctorTable th {
+  padding: 1.5px;
+  text-align: left;
+  border: 3px dotted black;
+
+}
+
+/* Estilos para las celdas de datos */
+#doctorTable td {
+  padding: 4px;
+  border: 2px solid #1827ce;
+  background-color: #a8d9fb;
+
+}
+
+/* Estilos alternos para las filas */
+#doctorTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/******************************************************************************/
+/*TABLA PACIENTES*/
+h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow:1px 2px 0px #167dd7, -1px -1px 0px #0b2edd, 1px -1px 0px #000, -1px 1px 0px #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#pacientTable {
+border-collapse: collapse; /* Combina los bordes de las celdas */
+width: 100%;
+align-items: center;
+left: 10%;
+right: 20px;
+
+}
+
+/* Estilos para el encabezado de la tabla */
+#pacientTable thead {
+background-color: #86b1d0;
+}
+
+#pacientTable th {
+  padding: 1.5px;
+  text-align: left;
+  border: 3px dotted black;
+
+}
+
+/* Estilos para las celdas de datos */
+#pacientTable td {
+padding: 4px;
+border: 2px solid #1827ce;
+background-color: #a8d9fb;
+
+}
+
+/* Estilos alternos para las filas */
+#pacientTable tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+
+
+
+  /*FOOTER*/
+  .footer {
+    text-align: center;
+    font-family: Georgia, serif;
+    padding: 2rem;
+    background-color: #bedffb;
+    color: #4750c9;
+    font-family: Georgia, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  }
+  .attr {
+    margin: 0;
+    font-size: 20px;
+    color: hsl(var(--clr-ter));
+    
+  }
+  .attr-lnk {
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.7;
+    color: hsl(var(--clr-dark));
+    position: relative;
+    text-decoration: underline;
+  }
+  .accent {
+    font-weight: 700;
+  }
+  
+  /*  */
+  .none {
+    display: none;
+  }
+  .block {
+    display: block;
+  }
+  .visible {
+    visibility: visible;
+  }
+  .hidden {
+    visibility: hidden;
+  }

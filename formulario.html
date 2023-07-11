@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" href="icono.png" type="img-pagina" />
+    <link rel="stylesheet" href="estilos.css">
+    <title> Actividad Calificable </title>
+
+</head>
+
+
+
+
+<body>
+            <header >
+                <div class="caja">
+                    <img src="u-distrital.png" class="universidad" alt="Logo u-distrital">
+                    <h3> -Actividad Calificable UNIDAD 6 -</h3>
+                </div>
+            </header>
+        
+        
+<!--*************************************************************************************************************************************-->    
+     <!--PRIMER FORMULARIO DOCTORES -->
+<main style="
+    width: 1000px;
+    height: 800px;
+">     
+    <section id="primer">
+        <form class="form" id="formulario" >
+            <p class="title">Registro Doctor</p>
+            <p class="message">Complete los campos requeridos </p>
+        
+
+         <!--Nombre-->   
+        <label for="doctornombre" >
+            <input placeholder="" type="text" class="input"  id="nombre" required>
+            <span>Nombre</span>
+        </label>
+     
+        
+        <!--apellido-->
+        <label for="doctorLastName">
+            <input  placeholder="" type="text" class="input"  id="apellido" required>
+            <span>apellido</span>
+        </label>
+        
+        <!--numero cédula-->
+        <label for="doctorcedula">
+            <input placeholder="" type="text" class="input" id="cedula" required>
+            <span>Numero Cédula</span>
+        </label>
+
+      
+    <!--LISTA DESPLEGABLE ESPECIALIDAD-->
+    
+    <label id="esp"  for="doctorSpeciality">Especialidad:</label>
+    <select title="especiality" id="especialidad" required>
+       
+      <option value="">Seleccione una especialidad requerida</option>  
+      <option value="Medicina general">Medicina general</option>
+      <option value="Cardiología">Cardiología</option>
+      <option value="Medicina interna">Medicina interna</option>
+      <option value="Dermatología">Dermatología</option>
+      <option value="Rehabilitación física">Rehabilitación física</option>
+      <option value="Psicología">Psicología</option>
+      <option value="Odontología">Odontología</option>
+      <option value="Radiología">Radiología</option>
+    </select>
+
+    <!--Consultorio-->   
+    <label for="consultorio">
+        <input  placeholder="" type="text" class="input" id="consultorio" required>
+        <span>Consultorio</span>
+    </label>
+   
+    <!--Correo Electrónico-->   
+    <label  for="email">
+        <input  placeholder="" type="text" class="input" id="email" required>
+        <span>Correo Electrónico</span>
+    </label>
+
+
+<!--BOTONES-->
+    <button class="btn btn-primary mt-2" type="submit">Enviar Doctor</button>
+    <button class="buttonD" type="button" onclick="reiniciarFormulario()">Reiniciar</button>
+
+    
+</form>
+
+<br>
+
+            
+</section>    
+
+<!--*************************************************************************************************************************************-->
+  
+
+ <!--SEGUNDO FORMULARIO DOCTORES -->
+ 
+    <form class="formP" id="formularioP" >
+        <p class="title2">Registro Paciente</p>
+        <p class="message2">Complete los campos requeridos </p>
+
+
+<!--Nombre-->   
+    <label for="pacientenombre" >
+        <input placeholder="" type="text" class="input2"  id="nombreP" required>
+        <span>Nombre</span>
+    </label>
+  
+
+<!--apellido-->
+    <label for="pacienteapellido">
+        <input  placeholder="" type="text" class="input2"  id="apellidoP" required>
+        <span>apellido</span>
+    </label>
+
+<!--numero cédula-->
+    <label for="Pacientecedula">
+        <input placeholder="" type="text" class="input2" id="cedulaP" required>
+        <span>Numero Cédula</span>
+    </label>
+
+<!--Edad-->   
+    <label for="pacienteedad">
+        <input  placeholder="" type="text" class="input2" id="edad" required>
+        <span>Edad</span>
+    </label>
+
+<!--Telefono-->   
+    <label for="pacientelefono">
+        <input  placeholder="" type="text" class="input2" id="telefono" required>
+        <span>Telefono</span>
+    </label>
+
+  
+<!--LISTA DESPLEGABLE ESPECIALIDAD-->
+
+<label id="esp2"  for="pacienteespecialidad">Especialidad:</label>
+<select title="especialityp" id="especialidadP" required>
+
+<option value="">Seleccione una especialidad requerida</option>  
+<option value="Medicina general">Medicina general</option>
+<option value="Cardiología">Cardiología</option>
+<option value="Medicina interna">Medicina interna</option>
+<option value="Dermatología">Dermatología</option>
+<option value="Rehabilitación física">Rehabilitación física</option>
+<option value="Psicología">Psicología</option>
+<option value="Odontología">Odontología</option>
+<option value="Radiología">Radiología</option>
+</select>
+
+
+
+<!--BOTONES-->
+    <button class="btn btn-primary mt-2" type="submit">Enviar Paciente</button>
+    <button class="buttonP"  type="button" onclick="reiniciarFormularioP()">Reiniciar</button>
+                
+</form>
+                            
+
+         
+      
+
+ 
+
+</main>
+
+
+    <!--FOOTER-->
+<!--CAJA DE RESPUESTA DOCTORES-->   
+<h2 id="tituloT">Lista de DOCTORES</h2>
+<table id="doctorTable">
+    <thead>
+        <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Numero de cedula</th>
+        <th>Especialidad</th>
+        <th>Consultorio</th>
+        <th>Email</th>
+        </tr>
+    </thead>
+</table>
+
+<!--CAJA DE RESPUESTA PACIENTES-->   
+<h2>Lista de PACIENTES</h2>
+<table id="pacientTable">
+    <thead>
+        <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Numero de cedula</th>
+        <th>Edad</th>
+        <th>Telefono</th>
+        <th>Especialidad</th>
+        </tr>
+    </thead>
+</table>
+
+
+
+
+<footer class="footer">
+    <p class="attr">
+      Actividad Calificable <span class="accent">:</span> <a href="https://aulasvirtuales.udistrital.edu.co/" class="attr-lnk" target="_blank">
+        Universidad Distrital </a> y <a href="https://agenciaatenea.gov.co/" class="attr-lnk" target="_blank">Agencia Atenea</a> - Codigo por 
+        <a href="https://github.com/AndreBacks?tab=repositories" class="attr-lnk" target="_blank">Andrea Castellanos</a>
+
+    </p>
+    
+  </footer>
+
+
+    
+</body>
+<script src="pagina.js"></script>
+
+</html>
